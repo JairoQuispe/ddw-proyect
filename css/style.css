@@ -1,6 +1,7 @@
 *{
 	padding: 0;
 	margin: 0;
+	transition: all 0.5s;
 }
 a{
 	color:#000;
@@ -11,29 +12,32 @@ body{
 	background-color:#4c4c4c;
 	font-family: 'Oswald', sans-serif;
 }
-.bg-album .album{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: -10px;
-	left: -2px;
-	z-index: -20;
-	filter: blur(4px);
-	opacity: 0.8;
+h2{
+	padding: 60px 0;
+	font-size: 2rem;
+}
+.bg-album{
+	background-image: url(../img/photo_2018-10-21_23-44-40-blur.jpg);
+	background-size: cover;
 }
 .main-header-menu{
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(84,84,84,0.4);
 	width: 100%;
+	position: fixed;
 	padding: 20px 0;
+	border-bottom: 1px solid #3d3d3d;
 	display: inline-flex;
 	justify-content:center;
+	align-content:center;
 }
 .main-header-menu h1{
+	font-size: 2.5rem;
 	margin-right:50px;
 	margin-left:50px;
 }
+
 .main-home-info{
-	padding: 40px 10%;
+	padding: 210px 10%;
 }
 .album-home{
 	color:white;
@@ -42,8 +46,11 @@ body{
 }
 .album-home img{
 	padding: 0 40px;
-	width:450px;
+	width:400px;
 	height: 320px;
+}
+.album-home p{
+	font-size: 18px;
 }
 .main-header-menu h1{
 	 text-shadow: 2px 2px #b1b5bc;
@@ -59,5 +66,10 @@ body{
 .main-menu ul li:hover{
 	border-radius: 22px;
 	background-color: rgba(0,0,0,0.5);
-	
+}
+.main-context{
+	background-image: url(../img/photo_2018-10-21_23-05-03-blur.jpg);
+	background-size: cover;
+	padding: 80px 10%;
+	text-align: center;
 }
