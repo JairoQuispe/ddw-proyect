@@ -1,0 +1,23 @@
+{
+	"song" : [
+		{
+			"id" : 0,
+			"name" : "Feuer frei!",
+			"artist" : "Rammstein",
+			"path" : "Rammstein - Feuer frei!",
+			"cover" : "Rammstein - Feuer frei!"
+		},
+		{
+			"id" : 1,
+			"name" : "Beyond The Invisible",
+			"artist" : "Enigma",
+			"path" : "Enigma - Beyond The Invisible"
+		},
+		{
+			"id" : 2,
+			"name" : "Enter Sandman",
+			"artist" : "Metallica",
+			"path" : "Metallica - Enter Sandman"
+		}
+	]
+}
