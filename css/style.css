@@ -161,7 +161,7 @@ nav.main-menu{
 	height: 100vh;
 	background-image: url(../img/photo_2018-10-21_23-05-03-blur.jpg);
 	background-size: cover;
-	padding: 80px 10%;
+	padding: 10px 10%;
 	text-align: center;
 }
 .main-context h2{
@@ -171,6 +171,7 @@ h2{
 	font-size:40px;
 }
 h3{
+	margin: 0;
 	font-size:30px;
 }
 .main-vinyl{
@@ -183,6 +184,7 @@ h3{
 	background: #fff;
 }
 .main-vinyl img{
+	margin-top: 30px;
 	width: 600px;
 	height: 400px;
 }
@@ -190,4 +192,8 @@ h3{
 	color:#fff;
 	background: #000;
 	border: 1px solid #000;
+}
+.main-img-desc span{
+	font-weight: bold;
+	text-transform: uppercase;
 }
