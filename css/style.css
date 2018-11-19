@@ -1,47 +1,137 @@
 *{
-	padding: 0;
-	margin: 0;
+
+	box-sizing: border-box;
 	transition: all 0.5s;
 }
+
 a{
 	color:#000;
 	text-decoration: none;
 }
 body{
+	margin:0;
+	line-height: 1.5;
 	color:white;
+	overflow-x:hidden;
 	background-color:#4c4c4c;
 	font-family: 'Oswald', sans-serif;
 }
+.header{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	color:#fff;
+}
+.content{
+	max-width: 49rem;
+	padding-left:1rem;
+	padding-right: 1rem;
+	margin:auto;
+	text-align: center;
+}
+.header-video{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.header-video video{
+	min-width: 100%;
+	min-height: 100%;
+}
+.header-overlay{
+	height: 100vh;
+	width:100vw;
+	position: absolute;
+	top:0;
+	left:0;
+	background:#191d21;
+	z-index:1;
+	opacity:.85;
+}
+.header-content{
+	min-width: 100%;
+	text-align:center;
+	z-index:2;
+}
+.header-content h1{
+	font-size:50px;
+	text-shadow: 2px 2px #b1b5bc;
+	margin-bottom: 0;
+	padding-bottom: 0.8rem;
+	text-transform: uppercase;
+}
 h2{
-	padding: 60px 0;
-	font-size: 2rem;
+	font-size:40px;
 }
-.bg-album{
-	background-image: url(../img/photo_2018-10-21_23-44-40-blur.jpg);
-	background-size: cover;
+.header-content p{
+	font-size:1rem;
+	font-style: italic;
+	display: block;
+	padding-bottom: 2rem;
 }
-.main-header-menu{
-	background-color: rgba(84,84,84,0.4);
+.btn{
+	color:#FFF;
+	font-size:1.2rem;
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border: 1px solid #ffF;
+	text-transform: uppercase;
+}
+.btn:hover{
+	color:#fff;
+	background: #000;
+	border: 1px solid #000;
+}
+
+.main-video{
+	text-align: center;
 	width: 100%;
-	position: fixed;
-	padding: 20px 0;
-	border-bottom: 1px solid #3d3d3d;
+	padding: 5rem 0;
+	background: #ededed;
+}
+.main-video-items{
+	display:flex;
+	justify-content: space-around;
+	flex-direction: row;
+	text-align:center;
+	margin:0 auto;
+	align-items: center;
+	
+}
+nav.main-menu{
+	width: 100%;
+	background-color: rgba(34, 36, 43, 0.8);
+	position:fixed;
 	display: inline-flex;
 	justify-content:center;
 	align-content:center;
+	z-index: 99;
 }
-.main-header-menu h1{
-	font-size: 2.5rem;
-	margin-right:50px;
-	margin-left:50px;
+.main-video h2{
+	display: block;
+	padding: 0;
+	padding-bottom: 1.5rem;
+	margin:0;
+	position: relative;
+	color:#000;
+	clear: both;
 }
+.bg-album{
+	height: 850px;
+	background-image: url(../img/photo_2018-10-21_23-44-40-blur.jpg);
+	background-size: cover;
+}
+
 
 .main-home-info{
 	padding: 210px 10%;
 }
 .album-home{
 	color:white;
-	display: inline-flex;
+	display: flex;
 	justify-content:center;
 }
 .album-home img{
@@ -68,8 +158,36 @@ h2{
 	background-color: rgba(0,0,0,0.5);
 }
 .main-context{
+	height: 100vh;
 	background-image: url(../img/photo_2018-10-21_23-05-03-blur.jpg);
 	background-size: cover;
 	padding: 80px 10%;
 	text-align: center;
+}
+.main-context h2{
+	padding: 12px 0;
+}
+h2{
+	font-size:40px;
+}
+h3{
+	font-size:30px;
+}
+.main-vinyl{
+	color:#000;
+	height: 100vh;
+	min-width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	background: #fff;
+}
+.main-vinyl img{
+	width: 600px;
+	height: 400px;
+}
+.main-vinyl .negro{
+	color:#fff;
+	background: #000;
+	border: 1px solid #000;
 }
