@@ -21,10 +21,7 @@
 	<header id="header" class="header content">
 		<div class="header-video">
 			<video id="home-video" psoter="img/poster.jpg" loop autoplay>
-				<source src="video/small/PanteraCowboysFromHell-INTRO21.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-				<source src="video/small/PanteraCowboysFromHell-INTRO21.webm" type='video/webm' >
-				<source src="video/small/PanteraCowboysFromHell-INTRO21.mp4" type='video/mp4'>
-				<p>Video is not visible, most likely your browser does not support HTML5 video</p>
+
 			</video>
 		</div>
 		<div class="header-overlay"></div>
@@ -110,5 +107,28 @@
 	<footer>
 		
 	</footer>
+	<script>
+		let v = document.getElementById("home-video")
+		var req = new XMLHttpRequest();
+		req.open('GET', 'https://jairoquispe.github.io/ddw-proyect/video/small/PanteraCowboysFromHell-INTRO21.mp4', true);
+		req.responseType = 'blob';
+
+		req.onload = function() {
+		// Onload is triggered even on 404
+		// so we need to check the status code
+			if (this.status === 200) {
+				var videoBlob = this.response;
+				var vid = URL.createObjectURL(videoBlob); // IE10+
+				// Video is now downloaded
+				// and we can set it as source on the video element
+				v.src = vid;
+			}
+		}
+		req.onerror = function() {
+		// Error
+		}
+
+		req.send();
+	</script>
 </body>
 </html>
