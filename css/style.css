@@ -1,18 +1,11 @@
-*{
+*{box-sizing: border-box;transition: all 0.5s;}
+a{color:#000;text-decoration: none;}
+html {scroll-behavior: smooth;}
 
-	box-sizing: border-box;
-	transition: all 0.5s;
-}
-
-a{
-	color:#000;
-	text-decoration: none;
-}
 body{
 	margin:0;
 	line-height: 1.5;
 	color:white;
-	overflow-x:hidden;
 	background-color:#4c4c4c;
 	font-family: 'Oswald', sans-serif;
 }
@@ -43,7 +36,7 @@ body{
 }
 .header-overlay{
 	height: 100vh;
-	width:100vw;
+	width:100%;
 	position: absolute;
 	top:0;
 	left:0;
@@ -103,7 +96,7 @@ h2{
 }
 nav.main-menu{
 	width: 100%;
-	background-color: rgba(34, 36, 43, 0.8);
+	background-color: rgba(34, 36, 43, 0.5);
 	position:fixed;
 	display: inline-flex;
 	justify-content:center;
@@ -121,7 +114,7 @@ nav.main-menu{
 	clear: both;
 }
 .bg-album{
-	height: 850px;
+	height: 100vh;
 	background-image: url(../img/photo_2018-10-21_23-44-40-blur.jpg);
 	background-size: cover;
 }
@@ -146,17 +139,23 @@ nav.main-menu{
 .main-header-menu h1{
 	 text-shadow: 2px 2px #b1b5bc;
 }
+.main-menu ul{
+	margin:0;
+	padding: 8px 0;
+}
 .main-menu ul li{
-	padding: 10px 25px;
+	padding: 10px 8px;
 	display: inline-block;
 }
 .main-menu ul li a{
+	padding: 4px 12px;
 	color:white;
 	font-size: 18px;
 }
-.main-menu ul li:hover{
-	border-radius: 22px;
-	background-color: rgba(0,0,0,0.5);
+.main-menu ul li a:hover{
+	color:#000;
+	border-radius: 4px;
+	background-color: rgba(255,255,255,0.9);
 }
 .main-context{
 	height: 100vh;

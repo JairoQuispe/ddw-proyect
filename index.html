@@ -14,15 +14,13 @@
 			<li class="main-menu-li"><a href="#historia">Historia</a></li>
 			<li class="main-menu-li"><a href="#canciones">Canciones</a></li>
 			<li class="main-menu-li"><a href="#adquirir">Adquirir</a></li>
-			<li class="main-menu-li"><a href="http://pantera.com/">Página Oficial</a></li>
-			<li class="main-menu-li"><a href="http://pantera.com/newshistory/">Noticias</a></li>
+			<li class="main-menu-li"><a href="http://pantera.com/" target="_blank">Página Oficial</a></li>
+			<li class="main-menu-li"><a href="http://pantera.com/newshistory/" target="_blank">Noticias</a></li>
 		</ul>
 	</nav>
 	<header id="header" class="header content">
 		<div class="header-video">
-			<video id="home-video" psoter="img/poster.jpg" loop autoplay>
-
-			</video>
+			<video id="home-video" psoter="img/poster.jpg" loop autoplay></video>
 		</div>
 		<div class="header-overlay"></div>
 		<div class="header-content">
@@ -57,7 +55,7 @@
 				<p><span>Duración: </span>57:41 minutos</p>
 				<p><span>Fecha de Lanzamiento: </span>1990</p>
 				<br>
-				<a href="https://www.amazon.es/Cowboys-Hell-Vinilo-Pantera/dp/B0036BDPOI/ref=tmm_vnl_swatch_0?_encoding=UTF8&qid=&sr=" class="btn negro">COMPRAR AHORA</a>
+				<a target="_blank" href="https://www.amazon.es/Cowboys-Hell-Vinilo-Pantera/dp/B0036BDPOI/ref=tmm_vnl_swatch_0?_encoding=UTF8&qid=&sr=" class="btn negro">COMPRAR AHORA</a>
 			</div>
 	</section>
 	<section class="bg-album">
@@ -77,21 +75,20 @@
 			</div>
 			<div class="main-songs-rec">
 				<h3>LISTA DE CANCIONES</h3>
-					<ol>
-						<span>
-							<li class="main-menu-li">Coywboys From Hell</li>
-							<li class="main-menu-li">Primal Concrete Seldge</li>
-							<li class="main-menu-li">Psycho Holiday</li>
-							<li class="main-menu-li">Heresy</li>
-							<li class="main-menu-li">Cemetery Gates</li>
-							<li class="main-menu-li">Domination</li>
-							<li class="main-menu-li">Shattered</li>
-							<li class="main-menu-li">Clash Whit Reality</li>
-							<li class="main-menu-li">Medicine Man</li>
-							<li class="main-menu-li">Message In Blood</li>
-							<li class="main-menu-li">The Sleep</li>
-							<li class="main-menu-li">The Art Of Shredding</li>
-						</span>
+					<ol class="main-list-songs">
+						<li class="main-menu-li">Coywboys From Hell</li>
+						<li class="main-menu-li">Primal Concrete Seldge</li>
+						<li class="main-menu-li">Psycho Holiday</li>
+						<li class="main-menu-li">Heresy</li>
+						<li class="main-menu-li">Cemetery Gates</li>
+						<li class="main-menu-li">Domination</li>
+						<li class="main-menu-li">Shattered</li>
+						<li class="main-menu-li">Clash Whit Reality</li>
+						<li class="main-menu-li">Medicine Man</li>
+						<li class="main-menu-li">Message In Blood</li>
+						<li class="main-menu-li">The Sleep</li>
+						<li class="main-menu-li">The Art Of Shredding</li>
+
 					</ol>
 			</div>
 	</section>
@@ -110,24 +107,19 @@
 	<script>
 		let v = document.getElementById("home-video")
 		var req = new XMLHttpRequest();
-		req.open('GET', 'https://jairoquispe.github.io/ddw-proyect/video/small/PanteraCowboysFromHell-INTRO21.mp4', true);
-		req.responseType = 'blob';
-
+			req.open('GET', 'https://jairoquispe.github.io/ddw-proyect/video/small/PanteraCowboysFromHell-INTRO21.mp4', true);
+			req.responseType = 'blob';
 		req.onload = function() {
-		// Onload is triggered even on 404
-		// so we need to check the status code
 			if (this.status === 200) {
 				var videoBlob = this.response;
 				var vid = URL.createObjectURL(videoBlob); // IE10+
-				// Video is now downloaded
-				// and we can set it as source on the video element
 				v.src = vid;
+				v.play();
 			}
 		}
 		req.onerror = function() {
 		// Error
 		}
-
 		req.send();
 	</script>
 </body>
