@@ -109,6 +109,7 @@ nav.main-menu{
 	justify-content:center;
 	align-content:center;
 	z-index: 99;
+	background-attachment: fixed;
 }
 .main-video h2{
 	display: block;
@@ -197,3 +198,23 @@ h3{
 	font-weight: bold;
 	text-transform: uppercase;
 }
+.main-songs{
+	color:#000;
+	height: 100vh;
+	min-width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	background: #fff;
+}
+.main-songs img{
+	margin-top: 30px;
+	width: 600px;
+	height: 400px;
+}
+
+.main-songs-rec span{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
